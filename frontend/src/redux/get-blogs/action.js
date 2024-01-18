@@ -7,7 +7,7 @@ import axios from "axios";
 export const getBlogList = (dispatch) => {
   dispatch({ type: GET_BLOGS_LIST_REQ });
   axios
-    .get(`${process.env.REACT_APP_URL}/blogs/get-blogs`, {
+    .get(`${process.env.REACT_APP_URL}/blogs/get-our-blogs`, {
       headers: { Authorization: JSON.parse(localStorage.getItem("token")) },
     })
     .then((res) => {

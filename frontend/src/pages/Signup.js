@@ -12,7 +12,6 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Toast,
   useToast,
   Spinner,
 } from "@chakra-ui/react";

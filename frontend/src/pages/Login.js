@@ -20,7 +20,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { getAuth } from "../redux/sign-in/actions.js";
 import { Spinner } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -117,6 +117,14 @@ export default function Login() {
                   }}>
                   {!isLoading ? "Sign in" : <Spinner size="sm" />}
                 </Button>
+              </Stack>
+              <Stack pt={6}>
+                <Text align={"center"}>
+                  If you are new ?{" "}
+                  <Link to="/sign-up" color={"red.400"}>
+                    Register
+                  </Link>
+                </Text>
               </Stack>
             </Stack>
           </form>

@@ -20,9 +20,6 @@ import { updateBlog } from "../redux/update-blog/action";
 import { getBlogList } from "../redux/get-blogs/action";
 const EditBlog = ({ isOpen, onClose, onOpen, editdata }) => {
   const dispatch = useDispatch();
-  const selector = useSelector((store) => {
-    console.log(store.UpdateBlogReducer);
-  });
   useEffect(() => {
     reset(editdata);
   }, [editdata]);
